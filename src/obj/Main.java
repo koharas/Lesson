@@ -14,6 +14,22 @@ public class Main {
 		shouhin.show();
 		shouhin.showTax();
 
+		Uriage uri = new Uriage();
+		uri.kosu = 5;
+		uri.shouhin = shouhin;
+		uri.show();
+		uri.showUriage();
+
+		Shouhin sho2 = new Shouhin();
+		sho2.name = "みかん";
+		sho2.price = 150;
+
+		Uriage uri2 = new Uriage();
+		uri2.kosu = 3;
+		uri2.shouhin = sho2;
+		uri2.show();
+		uri2.showUriage();
+
 		En en = new En();
 		en.hankei = 10;
 		en.menseki();
@@ -40,7 +56,7 @@ public class Main {
 		h2.hi = 7;
 		h2.show();
 
-		
+
 	}
 
 }

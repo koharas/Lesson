@@ -5,6 +5,14 @@ public class Hero {
 	int hp;
 	Sword sword;
 
+	public void attack(Matango m) {
+		// mのHPが5減る
+		m.hp -= this.sword.damage;
+		System.out.println(this.name+"の攻撃！");
+		System.out.println("ダメージ" + this.sword.damage+"!");
+		System.out.println("残りHP" + m.hp);
+	}
+
 	public void sleep() {
 		this.hp = 100;
 		System.out.println(this.name + "は、眠って回復した！");
