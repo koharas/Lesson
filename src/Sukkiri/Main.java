@@ -6,13 +6,9 @@ public class Main {
 		String str = new String("こんにちは");
 		System.out.println(str);
 
-		Sword s = new Sword();
-		s.name = "炎の剣";
-		s.damage = 10;
+		Sword s = new Sword("炎の剣",10);
 
 		Hero h = new Hero();
-		h.name = "ミナト";
-		h.hp = 100;
 		h.sword = s;
 		System.out.println("勇者"+h.name+"を生み出しました");
 		System.out.println("現在の武器は" + h.sword.name);
@@ -29,7 +25,7 @@ public class Main {
 		Matango m2 = new Matango();
 		m2.hp = 48;
 		m2.suffix = 'B';
-		
+
 		h.attack(m1);
 
 		h.slip();

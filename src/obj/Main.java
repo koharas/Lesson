@@ -3,14 +3,13 @@ package obj;
 public class Main {
 
 	public static void main(String[] args) {
-		Sankaku s = new Sankaku();
-		s.teihen = 10;
-		s.takasa = 5;
+		Teacher t = new Teacher("山田");
+		t.show();
+
+		Sankaku s = new Sankaku(10,5);
 		s.menseki();
 
-		Shouhin shouhin = new Shouhin();
-		shouhin.name = "りんご";
-		shouhin.price = 100;
+		Shouhin shouhin = new Shouhin("りんご",100);
 		shouhin.show();
 		shouhin.showTax();
 
@@ -20,9 +19,7 @@ public class Main {
 		uri.show();
 		uri.showUriage();
 
-		Shouhin sho2 = new Shouhin();
-		sho2.name = "みかん";
-		sho2.price = 150;
+		Shouhin sho2 = new Shouhin("みかん",150);
 
 		Uriage uri2 = new Uriage();
 		uri2.kosu = 3;
@@ -55,6 +52,14 @@ public class Main {
 		h2.tuki = 5;
 		h2.hi = 7;
 		h2.show();
+
+		Nichiji n = new Nichiji();
+		n.tuki = 4;
+		n.hi = 28;
+		n.ji = 13;
+		n.hun = 30;
+		n.show();
+		n.showJikan();
 
 
 	}

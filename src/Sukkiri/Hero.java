@@ -5,6 +5,15 @@ public class Hero {
 	int hp;
 	Sword sword;
 
+	public Hero(String n) {
+		this.hp = 100;
+		this.name = n;
+	}
+
+	public Hero() {
+		this("ダミー");
+	}
+
 	public void attack(Matango m) {
 		// mのHPが5減る
 		m.hp -= this.sword.damage;
