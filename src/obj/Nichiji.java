@@ -4,6 +4,12 @@ public class Nichiji extends Hizuke{
 	int ji;
 	int hun;
 
+	public Nichiji(int tuki, int hi, int ji, int hun) {
+		super(tuki, hi);
+		this.ji = ji;
+		this.hun = hun;
+	}
+
 	public void show() {
 		// 親のshowを呼び出す
 		super.show();

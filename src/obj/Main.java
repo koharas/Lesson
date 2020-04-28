@@ -43,21 +43,13 @@ public class Main {
 		System.out.println(dm.kingaku+"円");
 		System.out.println(dm.point+"ポイント");
 
-		Hizuke h1 = new Hizuke();
-		h1.tuki = 4;
-		h1.hi = 27;
+		Hizuke h1 = new Hizuke(4,27);
 		h1.show();
 
-		Hizuke h2 = new Hizuke();
-		h2.tuki = 5;
-		h2.hi = 7;
+		Hizuke h2 = new Hizuke(5,7);
 		h2.show();
 
-		Nichiji n = new Nichiji();
-		n.tuki = 4;
-		n.hi = 28;
-		n.ji = 13;
-		n.hun = 30;
+		Nichiji n = new Nichiji(4,28,13,30);
 		n.show();
 		n.showJikan();
 
