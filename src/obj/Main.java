@@ -27,8 +27,8 @@ public class Main {
 		uri2.show();
 		uri2.showUriage();
 
-		En en = new En();
-		en.hankei = 10;
+		En en = new En(10);
+		//en.hankei = 10;
 		en.menseki();
 		en.enshu();
 

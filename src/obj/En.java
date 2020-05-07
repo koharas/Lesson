@@ -1,9 +1,12 @@
 package obj;
 
-public class En {
+public class En implements Zukei{
 	int hankei;
 
-	void menseki() {
+	public En(int hankei) {
+		this.hankei = hankei;
+	}
+	public void menseki() {
 		System.out.println(hankei*hankei*3.14);
 	}
 	void enshu() {

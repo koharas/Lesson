@@ -1,6 +1,6 @@
 package obj;
 
-public class Sankaku {
+public class Sankaku implements Zukei{
 	int teihen;
 	int takasa;
 

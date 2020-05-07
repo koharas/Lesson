@@ -3,7 +3,10 @@ package keisho;
 public class Main {
 
 	public static void main(String[] args) {
-		SuperHero sh = new SuperHero();
+
+//		Character c = new Character();
+
+//		SuperHero sh = new SuperHero();
 //		sh.fly();
 //		sh.land();
 //		sh.run();

@@ -1,8 +1,6 @@
 package keisho;
 
-public class Hero {
-	String name="ミナト";
-	int hp=100;
+public class Hero extends Character{
 
 	public Hero() {
 
@@ -21,7 +19,4 @@ public class Hero {
 		System.out.println("残りHP" + m.hp);
 	}
 
-	public void run() {
-		System.out.println(this.name + "は逃げ出した！");
-	}
 }
