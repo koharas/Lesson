@@ -3,35 +3,48 @@ package Sukkiri;
 public class Main {
 
 	public static void main(String[] args) {
-		String str = new String("こんにちは");
-		System.out.println(str);
+		Hero.setRandomMoney();
+		System.out.println(Hero.money);
 
 		Sword s = new Sword("炎の剣",10);
 
-		Hero h = new Hero();
-		h.sword = s;
-		System.out.println("勇者"+h.name+"を生み出しました");
-		System.out.println("現在の武器は" + h.sword.name);
+		Hero h = new Hero("ミナト");
+		Hero h2 = new Hero("ヤマダ");
+		Hero h3 = Hero.createHero();
 
-		Wizard w = new Wizard();
-		w.name = "スガワラ";
-		w.hp = 50;
-		w.heal(h);
 
-		Matango m1 = new Matango();
-		m1.hp = 50;
-		m1.suffix = 'A';
+		Hero.money = 500;
 
-		Matango m2 = new Matango();
-		m2.hp = 48;
-		m2.suffix = 'B';
+		System.out.println(Hero.money);
 
-		h.attack(m1);
+//		h.setName("タナカ");
+//		h.setSword(s);
+//		System.out.println("勇者"+h.getName()+"を生み出しました");
+//		System.out.println("現在の武器は" + h.getSword().getName());
+//
+//		h.setHp(-100);
+//		System.out.println(h.getHp());
+		//h.die();
 
-		h.slip();
-		m1.run();
-		m2.run();
-		h.run();
+//		Wizard w = new Wizard();
+//		w.name = "スガワラ";
+//		w.hp = 50;
+//		w.heal(h);
+//
+//		Matango m1 = new Matango();
+//		m1.hp = 50;
+//		m1.suffix = 'A';
+//
+//		Matango m2 = new Matango();
+//		m2.hp = 48;
+//		m2.suffix = 'B';
+//
+//		h.attack(m1);
+//
+//		h.slip();
+//		m1.run();
+//		m2.run();
+//		h.run();
 
 	}
 

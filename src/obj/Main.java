@@ -3,19 +3,22 @@ package obj;
 public class Main {
 
 	public static void main(String[] args) {
-		Teacher t = new Teacher("山田");
-		t.show();
-
-		Sankaku s = new Sankaku(10,5);
-		s.menseki();
+//		Teacher t = new Teacher("山田");
+//		t.show();
+//
+//		Sankaku s = new Sankaku(10,5);
+//		s.menseki();
 
 		Shouhin shouhin = new Shouhin("りんご",100);
 		shouhin.show();
 		shouhin.showTax();
 
+
+		Book b = new Book("それから",500,"夏目漱石");
+
 		Uriage uri = new Uriage();
 		uri.kosu = 5;
-		uri.shouhin = shouhin;
+		uri.shouhin = b;
 		uri.show();
 		uri.showUriage();
 
@@ -36,12 +39,12 @@ public class Main {
 		dm.charge(1000);
 		dm.buy(500);
 
-		System.out.println(dm.kingaku+"円");
-		System.out.println(dm.point+"ポイント");
+		System.out.println(dm.getKingaku()+"円");
+		System.out.println(dm.getPoint()+"ポイント");
 
 		dm.change();
-		System.out.println(dm.kingaku+"円");
-		System.out.println(dm.point+"ポイント");
+		System.out.println(dm.getKingaku()+"円");
+		System.out.println(dm.getPoint()+"ポイント");
 
 		Hizuke h1 = new Hizuke(4,27);
 		h1.show();

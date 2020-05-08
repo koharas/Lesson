@@ -1,8 +1,16 @@
 package obj;
 
 public class DensiMoney {
-	int kingaku=0;
-	int point=0;
+	private int kingaku=0;
+	private int point=0;
+
+	public int getKingaku() {
+		return kingaku;
+	}
+
+	public int getPoint() {
+		return point;
+	}
 
 	void charge(int m) {
 		this.kingaku += m;

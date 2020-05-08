@@ -12,4 +12,11 @@ public class Member {
 	void show() {
 		System.out.println(this.name + " " + this.tel);
 	}
+
+	@Override
+	public String toString() {
+		return this.name + " " + this.tel;
+	}
+
+
 }

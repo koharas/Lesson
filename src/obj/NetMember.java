@@ -12,4 +12,11 @@ public class NetMember extends Member{
 		super.show();
 		System.out.println(mail);
 	}
+
+	@Override
+	public String toString() {
+		return super.toString() + " " + this.mail;
+	}
+
+
 }

@@ -1,9 +1,10 @@
 package Sukkiri;
 
 public class Hero {
-	String name;
-	int hp;
-	Sword sword;
+	private String name;
+	private int hp;
+	private Sword sword;
+	public static int money=100;
 
 	public Hero(String n) {
 		this.hp = 100;
@@ -14,12 +15,60 @@ public class Hero {
 		this("ダミー");
 	}
 
+	public static Hero createHero() {
+		return new Hero();
+	}
+
+	public static void setRandomMoney() {
+		Hero.money = (int)(Math.random()*1000);
+		//System.out.println(this.name + "のお金は" + Hero.money);
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getHp() {
+		return this.hp;
+	}
+
+	public void setHp(int hp) {
+		if( hp < 0) {
+			System.out.println("hpはマイナスにできません");
+			return;
+		}
+		this.hp = hp;
+	}
+
+	public Sword getSword() {
+		return this.sword;
+	}
+
+	public void setSword(Sword sword) {
+		this.sword = sword;
+	}
+
+
 	public void attack(Matango m) {
 		// mのHPが5減る
-		m.hp -= this.sword.damage;
+		m.hp -= this.sword.getDamage();
 		System.out.println(this.name+"の攻撃！");
-		System.out.println("ダメージ" + this.sword.damage+"!");
+		System.out.println("ダメージ" + this.sword.getDamage()+"!");
 		System.out.println("残りHP" + m.hp);
+
+		System.out.println("反撃を受けた");
+		this.hp -= 2;
+		if( this.hp <= 0 ) {
+			this.die();
+		}
+	}
+
+	private void die() {
+		System.out.println(this.name + "は死亡してしまった");
 	}
 
 	public void sleep() {
