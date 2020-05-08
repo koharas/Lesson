@@ -7,7 +7,6 @@ public class Rental {
 
 	void add(Item item) {
 		list.add(item);
-		//item.days = 100;
 	}
 
 	void show() {
