@@ -28,11 +28,11 @@ public class DbSample {
 		UriageDAO udao = new UriageDAO();
 		//udao.insert(new Uriage(0,2,3,null));
 //		Uriage u = udao.findByUid(1);
-//		System.out.println(u.getSid() + " " + u.getHi());
+//		System.out.println(u.getHi());
 
 		ArrayList<Uriage> list = udao.findAll();
 		for( Uriage u : list) {
-			System.out.println(u.getSid() + " " + u.getHi());
+			System.out.println(u.getHi());
 		}
 	}
 
