@@ -1,6 +1,7 @@
 package obj;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 
 public class KukuMain {
 
@@ -13,8 +14,12 @@ public class KukuMain {
 
 		for(KukuMondai m : list) {
 			m.show();
-			int kotae = new java.util.Scanner(System.in).nextInt();
-			m.check(kotae);
+			try {
+				int kotae = new java.util.Scanner(System.in).nextInt();
+				m.check(kotae);
+			}catch(InputMismatchException e) {
+				System.out.println("数字を入力してください");
+			}
 		}
 	}
 }
