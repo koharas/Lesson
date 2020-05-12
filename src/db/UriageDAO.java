@@ -28,7 +28,13 @@ public class UriageDAO {
 				int kosu = rs.getInt("kosu");
 				Date hi = rs.getDate("hi");
 
-				Uriage u = new Uriage(uid,sid,kosu,hi);
+				//Uriage u = new Uriage(uid,sid,kosu,hi);
+				Uriage u = new Uriage();
+				u.setUid(uid);
+				u.setSid(sid);
+				u.setKosu(kosu);
+				u.setHi(hi);
+
 				list.add(u);
 			}
 
@@ -109,4 +115,40 @@ public class UriageDAO {
 			System.out.println("insertエラー:" + e.getMessage());
 		}
 	}
+
+	public void update(Uriage u) {
+		try (Connection con = DriverManager.getConnection(URL,USER,PASS);){
+
+			String sql = "UPDATE uriage SET sid=?,kosu=?,hi=? WHERE uid=?";
+			PreparedStatement stmt = con.prepareStatement(sql);
+			stmt.setInt(1, u.getSid());
+			stmt.setInt(2, u.getKosu());
+			stmt.setDate(3, u.getHi());
+			stmt.setInt(4, u.getUid());
+
+			stmt.executeUpdate();
+
+			stmt.close();
+
+		} catch (SQLException e) {
+			System.out.println("updateエラー:" + e.getMessage());
+		}
+	}
+
+	public void delete(int uid) {
+		try (Connection con = DriverManager.getConnection(URL,USER,PASS);){
+
+			String sql = "DELETE FROM uriage WHERE uid=?";
+			PreparedStatement stmt = con.prepareStatement(sql);
+			stmt.setInt(1, uid);
+
+			stmt.executeUpdate();
+
+			stmt.close();
+
+		} catch (SQLException e) {
+			System.out.println("deleteエラー:" + e.getMessage());
+		}
+	}
+
 }
