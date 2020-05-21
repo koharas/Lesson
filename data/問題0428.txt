@@ -1,0 +1,29 @@
+問題２
+Seitoクラスにコンストラクタ（名前、国語、算数、社会）
+
+Seitoクラスを継承してChugakuseiクラスを作る。英語を追加。
+
+Chugakuseiを３人作って、ArrayListに入れて全員の合計点を表示
+
+
+
+
+
+
+
+
+
+
+
+
+問題１
+KukuMondaiクラス
+  フィールド int型 num1,num2
+　コンストラクタ   引数なし。num1とnum2に1～9の乱数をセット
+　メソッド void show()・・4×8=
+           void check(int kotae)・・正解、または、はずれ正解は〇
+
+KukuMainクラス
+  mainメソッド  
+  KukuMondaiを5個作りArrayListに格納、順次問題を出して解答(入力)
+

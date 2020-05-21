@@ -1,0 +1,14 @@
+元号変換
+gengou.html
+ セレクトボックス：昭和、平成、令和
+ テキストボックス：年
+
+/gengou  (GET)
+  平成30年は西暦2018年です。
+
+MVCで作る
+・GengouServlet
+・gengou.jsp
+・Gengouクラス
+    フィールド：int gengou 1:昭和 2:平成 3:令和
+                int nen

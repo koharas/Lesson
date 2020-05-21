@@ -1,0 +1,10 @@
+@startuml
+RentalMain -> Rental:生成
+RentalMain -> Book:生成
+RentalMain -> Rental:add()
+RentalMain -> CD:生成
+RentalMain -> Rental:add()
+RentalMain -> Rental:show()
+RentalMain -> Rental:goukei()
+Rental --> RentalMain:合計
+@enduml

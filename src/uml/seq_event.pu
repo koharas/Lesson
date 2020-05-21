@@ -1,0 +1,18 @@
+@startuml
+title イベントシーケンス図
+scale 2
+autonumber
+
+EventMain -[#green]> Event:生成
+loop
+EventMain -[#red]> Sankasha:生成
+EventMain -> Event:add()
+end
+EventMain -> Event:show()
+loop
+Event -> Sankasha:getName()
+Sankasha --> Event:name
+Event -> Sankasha:getAge()
+Sankasha --> Event:age
+end
+@enduml

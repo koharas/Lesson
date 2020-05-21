@@ -1,0 +1,7 @@
+sid.htmlで商品IDを入力
+->送信ボタンを押したらそのsidの商品を表示
+　　　　　　　　　　　（ShouhinServlet）
+------------
+insert.html で商品名、単価を入力
+-> InsertServlet(/insert) で
+   画面「商品追加しました」と slistへのリンク

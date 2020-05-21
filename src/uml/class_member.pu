@@ -1,0 +1,16 @@
+@startuml
+class Member{
+	-<<get/set>> mid
+	-<<get/set>> name
+	-<<get/set>> adr
+}
+class MemberDAO{
+	+findAll()
+	+findByMid()
+}
+class MemberMain{
+	+main()
+}
+MemberMain -> MemberDAO
+MemberDAO "1" *- "*" Member
+@enduml

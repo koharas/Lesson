@@ -1,6 +1,11 @@
 @startuml
+title ユースケース図
+skinparam DefaultFontName メイリオ
 left to right direction
 actor ユーザ
+note bottom of ユーザ
+	会員登録済み
+end note
 actor 管理者
 rectangle ショッピングサイト{
 	ユーザ --> (ログイン)

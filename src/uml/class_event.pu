@@ -1,0 +1,17 @@
+@startuml
+class Sankasha{
+	- <<get/set>> name
+	- <<get/set>> age
+}
+class Event{
+	-name
+	-hi
+	+add()
+	+show()
+}
+class EventMain{
+	+main()
+}
+Event "1" *- "*" Sankasha
+EventMain -> Event
+@enduml

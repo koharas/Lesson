@@ -1,0 +1,9 @@
+生徒クラス Seito
+フィールド　名前、国語(int)、算数(int)、社会(int)
+メソッド    void show() 
+                 表示例：田中　国語80点 算数70点 社会 50点
+            int goukei()
+                 合計を返す
+            double heikin()
+                 平均を返す
+

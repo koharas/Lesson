@@ -1,0 +1,41 @@
+レンタルショップ・・パッケージ rental
+抽象クラス Item
+　フィールド：name(String)、days(int)
+  コンストラクタ(name,days)
+  抽象メソッド：int getPrice()・・料金を返す16:00 2020/05/07
+  toString：名前 日数　料金　例：ワンピース 3日 150円
+
+Bookクラス（Item継承）・・１日50円
+CDクラス（Item継承）・・・１日目300円、２日目以降１日100円
+
+RentalMain の mainメソッド
+これらクラスのオブジェクトを３つほど作りArrayListに入れる。
+すべて表示、合計金額表示
+
+ワンピース 7日 350円
+パプリカ 3日 500円
+Lemon 1日 300円
+合計 1150円
+
+-------------------
+
+Rentalクラス
+　フイールド ArrayList<Item> list
+   メソッド void add(Item item) ・・listに追加
+            void show() ・・全item表示
+            int getGoukei()・・全item合計を返す
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

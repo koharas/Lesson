@@ -1,0 +1,9 @@
+Uriageの
+ArrayList<Uriage> findBySid(int sid)
+
+------------------
+UriageCheckクラス mainメソッド
+shouhinテーブルのsid、snameをすべて表示
+"どの売り上げを見たいですか？"
+1
+入力したsidの売り上げをすべて表示（日付　個数）

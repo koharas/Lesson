@@ -1,0 +1,15 @@
+元号西暦変換
+1:昭和 2:平成 3:令和
+2
+年を入力
+30
+平成30年は西暦2018年
+
+クラス名：Gengo
+メソッド：main・・入力と各メソッド呼び出しと表示を行う
+
+メソッド：getSeireki(int gengou,int nen)
+          戻り値 西暦
+
+メソッド：getGengouName(int gengou)
+          戻り値 gengouが1なら"昭和" 2なら"平成" 3なら"令和"

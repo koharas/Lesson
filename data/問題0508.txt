@@ -1,0 +1,20 @@
+●イベント参加者一覧
+
+参加者クラス Sankasha
+　フィールド:name(String)、age(int)
+  コンストラクタ(name,age)
+  getterとsetter
+
+イベントクラス Event
+　フィールド：name(String)、hi(Date)、SankashaのArrayList
+  コンストラクタ（name）・・hiは今日とする
+　メソッド：void add( Sankasha s )・・ArrayListにsを追加
+            void show()・・イベント名、年月日、全参加者の名前と年齢
+
+EventMain mainメソッド
+実行例：
+春の人狼大会
+2020年5月8日
+田中 30歳
+山田 25歳
+山本 35歳
